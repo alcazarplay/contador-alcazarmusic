@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alcázar Music | Suscriptores</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: linear-gradient(135deg,#080808,#252525,#080808);
+  text-align: center;
+  padding: 20px;
+}
+.card {
+  width: 100%;
+  max-width: 440px;
+  padding: 40px 25px;
+  border: 1px solid #b99443;
+  border-radius: 22px;
+  background: #111;
+  box-shadow: 0 0 35px #000;
+}
+.logo { color: #d6b35d; font-size: 30px; font-weight: bold; }
+.subtitle { color: #aaa; letter-spacing: 3px; font-size: 11px; }
+h2 { margin-top: 40px; color: #d6b35d; }
+#contador { font-size: 55px; font-weight: bold; margin: 15px 0; }
+.info { color: #aaa; font-size: 13px; }
+a {
+  display: block;
+  margin-top: 30px;
+  padding: 16px;
+  border-radius: 9px;
+  background: #e62117;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover { background: #b91b13; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">ALCÁZAR MUSIC</div>
+  <p class="subtitle">MÚSICA • COMUNIDAD • PASIÓN</p>
+
+  <h2>NUESTROS SUSCRIPTORES</h2>
+  <div id="contador">Cargando...</div>
+  <p class="info">Gracias por formar parte de nuestra comunidad</p>
+
+  <a href="https://www.youtube.com/@alcazarmusic?sub_confirmation=1"
+     target="_blank">
+     ▶ SUSCRIBIRME EN YOUTUBE
+  </a>
+</div>
+
+<script>
+async function actualizarContador() {
+  try {
+    const respuesta = await fetch('subscriber-count.json?t=' + Date.now());
+    if (!respuesta.ok) throw new Error('Sin datos');
+    const datos = await respuesta.json();
+
+    document.getElementById('contador').textContent =
+      Number(datos.subscribers).toLocaleString('es-CR');
+  } catch (error) {
+    document.getElementById('contador').textContent = 'Próximamente';
+  }
+}
+actualizarContador();
+</script>
+</body>
+</html>
