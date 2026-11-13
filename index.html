@@ -2,85 +2,208 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alcázar Music | Suscriptores</title>
-  <meta property="og:title" content="Alcázar Music | Contador de suscriptores">
-<meta property="og:description" content="Mira nuestro contador de suscriptores y únete a nuestra comunidad musical.">
-<meta property="og:image" content="https://alcazarplay.github.io/contador-alcazarmusic/preview.png">
-<meta property="og:url" content="https://alcazarplay.github.io/contador-alcazarmusic/">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<style>
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-  color: white;
-  background: linear-gradient(135deg,#080808,#252525,#080808);
-  text-align: center;
-  padding: 20px;
-}
-.card {
-  width: 100%;
-  max-width: 440px;
-  padding: 40px 25px;
-  border: 1px solid #b99443;
-  border-radius: 22px;
-  background: #111;
-  box-shadow: 0 0 35px #000;
-}
-.logo { color: #d6b35d; font-size: 30px; font-weight: bold; }
-.subtitle { color: #aaa; letter-spacing: 3px; font-size: 11px; }
-h2 { margin-top: 40px; color: #d6b35d; }
-#contador { font-size: 55px; font-weight: bold; margin: 15px 0; }
-.info { color: #aaa; font-size: 13px; }
-a {
-  display: block;
-  margin-top: 30px;
-  padding: 16px;
-  border-radius: 9px;
-  background: #e62117;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-a:hover { background: #b91b13; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Alcázar Music | Contador de suscriptores</title>
+
+  <meta name="description" content="Acompaña el crecimiento de Alcázar Music. Mira nuestro contador de suscriptores y únete a nuestra comunidad musical.">
+
+  <!-- CONFIGURACIÓN PARA FACEBOOK -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alcázar Music | Suscriptores">
+  <meta property="og:description" content="¡Ayúdanos a crecer! Mira nuestro contador y suscríbete a Alcázar Music.">
+  <meta property="og:url" content="https://alcazarplay.github.io/contador-alcazarmusic/">
+  <meta property="og:image" content="https://alcazarplay.github.io/contador-alcazarmusic/preview.png">
+  <meta property="og:image:alt" content="Alcázar Music - Contador de suscriptores de YouTube">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alcázar Music">
+  <meta name="twitter:description" content="Únete a nuestra comunidad musical.">
+
+  <meta name="theme-color" content="#080808">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      background: linear-gradient(135deg, #080808, #252525, #080808);
+    }
+
+    .card {
+      width: 100%;
+      max-width: 440px;
+      padding: 40px 25px;
+      border: 1px solid #b99443;
+      border-radius: 22px;
+      background: #111;
+      box-shadow: 0 0 35px rgba(0,0,0,.8);
+    }
+
+    .logo {
+      color: #d6b35d;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      color: #aaa;
+      letter-spacing: 3px;
+      font-size: 11px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: #d6b35d;
+      font-size: 19px;
+    }
+
+    #contador {
+      font-size: clamp(42px, 12vw, 58px);
+      font-weight: bold;
+      margin: 15px 0;
+      color: white;
+    }
+
+    .info {
+      color: #aaa;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .actualizacion {
+      color: #d6b35d;
+      font-size: 11px;
+      margin-top: 15px;
+    }
+
+    .boton {
+      display: block;
+      margin-top: 30px;
+      padding: 17px;
+      border-radius: 9px;
+      background: #e62117;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: .2s;
+    }
+
+    .boton:hover {
+      background: #b91b13;
+      transform: scale(1.02);
+    }
+
+    .gracias {
+      margin-top: 25px;
+      color: #d6b35d;
+      font-size: 13px;
+    }
+
+    footer {
+      margin-top: 35px;
+      color: #777;
+      font-size: 11px;
+    }
+  </style>
 </head>
+
 <body>
-<div class="card">
-  <div class="logo">ALCÁZAR MUSIC</div>
-  <p class="subtitle">MÚSICA • COMUNIDAD • PASIÓN</p>
 
-  <h2>NUESTROS SUSCRIPTORES</h2>
-  <div id="contador">Cargando...</div>
-  <p class="info">Gracias por formar parte de nuestra comunidad</p>
+  <main class="card">
 
-  <a href="https://www.youtube.com/@alcazarmusic?sub_confirmation=1"
-     target="_blank">
-     ▶ SUSCRIBIRME EN YOUTUBE
-  </a>
-</div>
+    <div class="logo">ALCÁZAR MUSIC</div>
 
-<script>
-async function actualizarContador() {
-  try {
-    const respuesta = await fetch('subscriber-count.json?t=' + Date.now());
-    if (!respuesta.ok) throw new Error('Sin datos');
-    const datos = await respuesta.json();
+    <p class="subtitle">
+      ADORACIÓN • MÚSICA • INSPIRACIÓN
+    </p>
 
-    document.getElementById('contador').textContent =
-      Number(datos.subscribers).toLocaleString('es-CR');
-  } catch (error) {
-    document.getElementById('contador').textContent = 'Próximamente';
-  }
-}
-actualizarContador();
-</script>
+    <h2>NUESTROS SUSCRIPTORES</h2>
+
+    <div id="contador">Cargando...</div>
+
+    <p class="info">
+      Gracias por formar parte de nuestra comunidad.
+      Cada suscriptor nos ayuda a seguir creciendo.
+    </p>
+
+    <div class="actualizacion" id="actualizacion">
+      Consultando YouTube...
+    </div>
+
+    <a
+      class="boton"
+      href="https://www.youtube.com/@alcazarmusic?sub_confirmation=1"
+      target="_blank"
+      rel="noopener noreferrer">
+      ▶ SUSCRIBIRME EN YOUTUBE
+    </a>
+
+    <div class="gracias">
+      ¡Gracias por apoyar a Alcázar Music! ❤️
+    </div>
+
+    <footer>
+      © Alcázar Music
+    </footer>
+
+  </main>
+
+  <script>
+    async function actualizarContador() {
+
+      const contador = document.getElementById("contador");
+      const actualizacion = document.getElementById("actualizacion");
+
+      try {
+
+        const respuesta = await fetch(
+          "subscriber-count.json?t=" + Date.now(),
+          { cache: "no-store" }
+        );
+
+        if (!respuesta.ok) {
+          throw new Error("No se pudo consultar el contador");
+        }
+
+        const datos = await respuesta.json();
+
+        contador.textContent =
+          Number(datos.subscribers).toLocaleString("es-CR");
+
+        if (datos.updatedAt) {
+          const fecha = new Date(datos.updatedAt);
+
+          actualizacion.textContent =
+            "Última actualización: " +
+            fecha.toLocaleString("es-CR");
+        } else {
+          actualizacion.textContent = "Contador de YouTube";
+        }
+
+      } catch (error) {
+
+        contador.textContent = "No disponible";
+        actualizacion.textContent =
+          "No se pudo cargar el contador. Intenta nuevamente.";
+
+        console.error(error);
+      }
+    }
+
+    actualizarContador();
+  </script>
+
 </body>
 </html>
